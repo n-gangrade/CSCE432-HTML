@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navdha’s Mini HTML Page</title>
+</head>
+
+<body>
+  <header>
+    <h1>Navdha’s Mini HTML Page</h1>
+    <p>
+      This page is intentionally simple (no CSS yet). It shows headings, links, images, lists, a table, and paragraphs.
+    </p>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#table">Table</a></li>
+      </ul>
+    </nav>
+    <hr />
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About This Page</h2>
+      <p>
+        I made this page to practice core HTML structure. I’m keeping it appropriate and “bland” so I can style it later with CSS.
+      </p>
+      <p>
+        HTML is for structure and meaning. CSS is for design. JavaScript is for behavior.
+      </p>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <p>
+        Here are a few links I use often:
+      </p>
+      <ul>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">
+            MDN: HTML Reference
+          </a>
+        </li>
+        <li>
+          <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">
+            W3Schools: Learn HTML
+          </a>
+        </li>
+        <li>
+          <a href="https://validator.w3.org/" target="_blank" rel="noopener">
+            W3C Markup Validation Service
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="images">
+      <h2>Images</h2>
+
+      <h3>Image with Semantic Meaning</h3>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=900&q=60"
+          alt="A laptop on a desk used for writing code"
+          width="450"
+        />
+        <figcaption>
+          This image supports the meaning of the page (coding / learning HTML).
+        </figcaption>
+      </figure>
+
+      <h3>Decorative Image</h3>
+      <p>
+        The next image is decorative only, so it has an empty alt attribute.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=60"
+        alt=""
+        width="450"
+      />
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+
+      <h3>Unordered List (Bullets)</h3>
+      <p>Things I like to do:</p>
+      <ul>
+        <li>Try new food</li>
+        <li>Work on side projects</li>
+        <li>Go on walks and listen to music</li>
+      </ul>
+
+      <h3>Ordered List (Numbered)</h3>
+      <p>My quick “make a webpage” checklist:</p>
+      <ol>
+        <li>Create an HTML file with a title</li>
+        <li>Add headings and sections</li>
+        <li>Add content (paragraphs, links, images)</li>
+        <li>Validate the HTML</li>
+        <li>Publish it</li>
+      </ol>
+    </section>
+
+    <section id="table">
+      <h2>Table (Non-formatting / Real Data)</h2>
+      <p>
+        This table shows a simple weekly plan. Tables should be used for data, not layout.
+      </p>
+
+      <table border="1">
+        <caption>Weekly Focus Plan</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Focus</th>
+            <th scope="col">Time (minutes)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td>HTML practice</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td>CSS practice</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>Mini project</td>
+            <td>45</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <hr />
+    <p>
+      © 2026 Navdha. <a href="#about">Back to top</a>
+    </p>
+  </footer>
+</body>
+</html>
