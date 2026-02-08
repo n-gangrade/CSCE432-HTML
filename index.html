@@ -3,166 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navdha Gangrade | Accessible Computing Bio</title>
-  <meta name="description" content="Bio page for Accessible Computing: interests, accessibility focus, and ways to connect.">
+  <title>Navdha Gangrade | Web Page Bio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
   <header class="site-header">
-    <div class="container header-grid">
-      <div>
-        <h1>Navdha Gangrade</h1>
-        <p class="tagline">
-          Computer Science student • Interested in <strong>accessible design</strong> and practical, inclusive software.
-        </p>
-      </div>
+    <h1>Navdha Gangrade</h1>
 
-      <figure class="profile">
-        <!-- NON-DECORATIVE image: meaningful content, has descriptive alt text -->
-        <img
-          src="images/navdha.jpg"
-          alt="Portrait of Navdha Gangrade smiling"
-          width="320"
-          height="320">
-        <figcaption class="caption">This is me in real life—say hi after class!</figcaption>
-      </figure>
-    </div>
+    <!-- NON-DECORATIVE image (meaningful) -->
+    <figure class="profile">
+      <img src="images/navdha.jpg" alt="Photo of Navdha Gangrade" width="260" height="260">
+      <figcaption>Hi! That’s me 🙂</figcaption>
+    </figure>
 
-    <!-- DECORATIVE image: empty alt + role presentation -->
-    <img
-      class="banner"
-      src="images/decorative-shapes.png"
-      alt=""
-      role="presentation"
-      width="1200"
-      height="220">
+    <!-- Decorative image -->
+    <img class="decor" src="images/sparkles.png" alt="" role="presentation" width="900" height="140">
   </header>
 
-  <nav class="site-nav" aria-label="Primary">
-    <div class="container nav-row">
-      <a href="#about">About</a>
-      <a href="#accessibility">Accessibility interests</a>
-      <a href="#team">Team project connections</a>
-      <a href="#contact">Contact</a>
-      <a href="bio-links.html">Class Bio Links Page</a>
-    </div>
+  <nav aria-label="Primary" class="nav">
+    <a href="#bio">Bio</a>
+    <a href="#access">Accessibility</a>
+    <a href="#contact">Contact</a>
+    <a href="bio-links.html">Class Bio Links Page</a>
   </nav>
 
-  <main id="main" class="container">
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About me</h2>
-
+  <main>
+    <section id="bio">
+      <h2>Bio</h2>
       <p>
-        I’m a senior CS student at Texas A&amp;M. I like building things that feel <em>calm</em>, clear, and fast—especially
-        tools that reduce friction for real people.
+        I’m a CS student who likes building <strong>useful</strong> tools that feel <em>easy</em> to use.
       </p>
 
-      <h3>Quick facts</h3>
+      <h3>Quick things I like</h3>
       <ul>
-        <li>I enjoy backend + full-stack development.</li>
-        <li>I care a lot about making software understandable and usable.</li>
+        <li>Backend + full-stack projects</li>
+        <li>Clean, organized interfaces</li>
       </ul>
     </section>
 
-    <section id="accessibility" aria-labelledby="acc-heading">
-      <h2 id="acc-heading">My accessibility interests</h2>
-
+    <section id="access">
+      <h2>Accessibility interests</h2>
       <p>
-        I’m interested in accessible computing because I want products to work well for <strong>more</strong> people,
-        in more contexts. I’m especially curious about:
+        I care about accessibility because I want software to work well for more people.
       </p>
 
+      <h3>What I’m interested in</h3>
       <ol>
-        <li>Designing pages that work with screen readers and keyboard navigation</li>
-        <li>Clear structure: headings, landmarks, and meaningful link text</li>
-        <li>Accessible visual design (contrast, spacing, readable typography)</li>
+        <li>Semantic HTML structure (headings, landmarks)</li>
+        <li>Good alt text and keyboard-friendly pages</li>
       </ol>
-
-      <h3>Topics I’d love to learn more about</h3>
-      <ul>
-        <li>WCAG best practices applied to everyday web apps</li>
-        <li>Accessible data visualizations and alt-text that’s actually useful</li>
-      </ul>
     </section>
 
-    <section id="team" aria-labelledby="team-heading">
-      <h2 id="team-heading">How we might work well together</h2>
+    <section id="contact">
+      <h2>Connect with me</h2>
+      <p>Send me a message using this form (it opens your email app).</p>
 
-      <p>
-        If you’re working on a team project and you care about accessibility, I’d love to collaborate on:
-      </p>
-
-      <ul>
-        <li>Creating accessible page structure (semantic HTML + ARIA when needed)</li>
-        <li>Writing meaningful alt text and testing keyboard navigation</li>
-        <li>Designing forms that are easy to understand and complete</li>
-      </ul>
-
-      <p class="callout">
-        If you’re into inclusive design, usability testing, or building accessible web components, let’s talk.
-      </p>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact me</h2>
-      <p>
-        Use the form below to draft an email to me. (It uses your email app and counts as a form that initiates an action.)
-      </p>
-
-      <form
-        class="contact-form"
-        action="mailto:navdha@example.com"
-        method="post"
-        enctype="text/plain">
-
+      <form action="mailto:navdha@example.com" method="post" enctype="text/plain">
         <fieldset>
-          <legend>Send a message</legend>
+          <legend>Message</legend>
 
-          <div class="form-row">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required>
 
-          <div class="form-row">
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose one</option>
+            <option value="team">Team project</option>
+            <option value="accessibility">Accessibility</option>
+          </select>
 
-          <div class="form-row">
-            <label for="topic">Topic</label>
-            <select id="topic" name="topic" required>
-              <option value="">Choose one</option>
-              <option value="team-project">Team project collaboration</option>
-              <option value="accessibility">Accessibility interest</option>
-              <option value="other">Something else</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-          </div>
+          <label for="msg">Message</label>
+          <textarea id="msg" name="message" rows="5" required></textarea>
 
           <button type="submit">Open email draft</button>
         </fieldset>
       </form>
 
-      <p class="small">
-        Note: Replace <code>navdha@example.com</code> with your real email before publishing.
+      <p class="note">
+        Replace <code>navdha@example.com</code> with your real email before publishing.
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-row">
-      <p>
-        <a href="bio-links.html">Back to Class Bio Links Page</a>
-      </p>
-      <p class="small">Last updated: <time datetime="2026-02-08">February 8, 2026</time></p>
-    </div>
+    <p><a href="bio-links.html">Back to Class Bio Links Page</a></p>
   </footer>
 </body>
 </html>
