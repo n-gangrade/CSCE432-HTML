@@ -1,140 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Navdha’s Mini HTML Page</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navdha Gangrade | Accessible Computing Bio</title>
+  <meta name="description" content="Bio page for Accessible Computing: interests, accessibility focus, and ways to connect.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <main>
-    <section id="about">
-      <h2>About This Page</h2>
-      <p>
-        I made this page to practice core HTML structure. I’m keeping it appropriate and “bland” so I can style it later with CSS.
-      </p>
-      <p>
-        HTML is for structure and meaning. CSS is for design. JavaScript is for behavior.
-      </p>
-    </section>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <section id="links">
-      <h2>Links</h2>
-      <p>
-        Here are a few links I use often:
-      </p>
-      <ul>
-        <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">
-            MDN: HTML Reference
-          </a>
-        </li>
-        <li>
-          <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">
-            W3Schools: Learn HTML
-          </a>
-        </li>
-        <li>
-          <a href="https://validator.w3.org/" target="_blank" rel="noopener">
-            W3C Markup Validation Service
-          </a>
-        </li>
-      </ul>
-    </section>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1>Navdha Gangrade</h1>
+        <p class="tagline">
+          Computer Science student • Interested in <strong>accessible design</strong> and practical, inclusive software.
+        </p>
+      </div>
 
-    <section id="images">
-      <h2>Images</h2>
-
-      <h3>Image with Semantic Meaning</h3>
-      <figure>
+      <figure class="profile">
+        <!-- NON-DECORATIVE image: meaningful content, has descriptive alt text -->
         <img
-          src="data:image/jpeg;base64,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"
-          alt="A image of the pokemon: snorlax"
-          width="450"
-        />
-        <figcaption>
-          This image supports the meaning of the page (coding / learning HTML).
-        </figcaption>
+          src="images/navdha.jpg"
+          alt="Portrait of Navdha Gangrade smiling"
+          width="320"
+          height="320">
+        <figcaption class="caption">This is me in real life—say hi after class!</figcaption>
       </figure>
+    </div>
 
-      <h3>Decorative Image</h3>
+    <!-- DECORATIVE image: empty alt + role presentation -->
+    <img
+      class="banner"
+      src="images/decorative-shapes.png"
+      alt=""
+      role="presentation"
+      width="1200"
+      height="220">
+  </header>
+
+  <nav class="site-nav" aria-label="Primary">
+    <div class="container nav-row">
+      <a href="#about">About</a>
+      <a href="#accessibility">Accessibility interests</a>
+      <a href="#team">Team project connections</a>
+      <a href="#contact">Contact</a>
+      <a href="bio-links.html">Class Bio Links Page</a>
+    </div>
+  </nav>
+
+  <main id="main" class="container">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About me</h2>
+
       <p>
-        The next image is decorative only, so it has an empty alt attribute.
+        I’m a senior CS student at Texas A&amp;M. I like building things that feel <em>calm</em>, clear, and fast—especially
+        tools that reduce friction for real people.
       </p>
-      <img
-        src="data:image/webp;base64,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"
-        alt=""
-        width="450"
-      />
+
+      <h3>Quick facts</h3>
+      <ul>
+        <li>I enjoy backend + full-stack development.</li>
+        <li>I care a lot about making software understandable and usable.</li>
+      </ul>
     </section>
 
-    <section id="lists">
-      <h2>Lists</h2>
+    <section id="accessibility" aria-labelledby="acc-heading">
+      <h2 id="acc-heading">My accessibility interests</h2>
 
-      <h3>Unordered List (Bullets)</h3>
-      <p>Things I like to do:</p>
+      <p>
+        I’m interested in accessible computing because I want products to work well for <strong>more</strong> people,
+        in more contexts. I’m especially curious about:
+      </p>
+
+      <ol>
+        <li>Designing pages that work with screen readers and keyboard navigation</li>
+        <li>Clear structure: headings, landmarks, and meaningful link text</li>
+        <li>Accessible visual design (contrast, spacing, readable typography)</li>
+      </ol>
+
+      <h3>Topics I’d love to learn more about</h3>
       <ul>
-        <li>Try new food</li>
-        <li>Work on side projects</li>
-        <li>Go on walks and listen to music</li>
+        <li>WCAG best practices applied to everyday web apps</li>
+        <li>Accessible data visualizations and alt-text that’s actually useful</li>
+      </ul>
+    </section>
+
+    <section id="team" aria-labelledby="team-heading">
+      <h2 id="team-heading">How we might work well together</h2>
+
+      <p>
+        If you’re working on a team project and you care about accessibility, I’d love to collaborate on:
+      </p>
+
+      <ul>
+        <li>Creating accessible page structure (semantic HTML + ARIA when needed)</li>
+        <li>Writing meaningful alt text and testing keyboard navigation</li>
+        <li>Designing forms that are easy to understand and complete</li>
       </ul>
 
-      <h3>Ordered List (Numbered)</h3>
-      <p>My quick “make a webpage” checklist:</p>
-      <ol>
-        <li>Create an HTML file with a title</li>
-        <li>Add headings and sections</li>
-        <li>Add content (paragraphs, links, images)</li>
-        <li>Validate the HTML</li>
-        <li>Publish it</li>
-      </ol>
+      <p class="callout">
+        If you’re into inclusive design, usability testing, or building accessible web components, let’s talk.
+      </p>
     </section>
 
-    <section id="table">
-      <h2>Table (Non-formatting / Real Data)</h2>
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact me</h2>
       <p>
-        This table shows a simple weekly plan. Tables should be used for data, not layout.
+        Use the form below to draft an email to me. (It uses your email app and counts as a form that initiates an action.)
       </p>
 
-      <table border="1">
-        <caption>Weekly Focus Plan</caption>
-        <thead>
-          <tr>
-            <th scope="col">Day</th>
-            <th scope="col">Focus</th>
-            <th scope="col">Time (minutes)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Monday</th>
-            <td>HTML practice</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <th scope="row">Wednesday</th>
-            <td>CSS practice</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <th scope="row">Friday</th>
-            <td>Mini project</td>
-            <td>45</td>
-          </tr>
-        </tbody>
-      </table>
+      <form
+        class="contact-form"
+        action="mailto:navdha@example.com"
+        method="post"
+        enctype="text/plain">
+
+        <fieldset>
+          <legend>Send a message</legend>
+
+          <div class="form-row">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option value="team-project">Team project collaboration</option>
+              <option value="accessibility">Accessibility interest</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit">Open email draft</button>
+        </fieldset>
+      </form>
+
+      <p class="small">
+        Note: Replace <code>navdha@example.com</code> with your real email before publishing.
+      </p>
     </section>
   </main>
 
-  <footer>
-    <hr />
-    <p>
-      © 2026 Navdha. <a href="#about">Back to top</a>
-    </p>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>
+        <a href="bio-links.html">Back to Class Bio Links Page</a>
+      </p>
+      <p class="small">Last updated: <time datetime="2026-02-08">February 8, 2026</time></p>
+    </div>
   </footer>
 </body>
 </html>
-
-
-
