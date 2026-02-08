@@ -211,4 +211,15 @@ button:focus {
 
 button {
   margin-top: 0.9rem;
-  b
+  border: 2px solid var(--teal-dark);
+  background: var(--teal);
+  color: #fff;
+  padding: 0.65rem 0.95rem;
+  border-radius: 999px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--teal-dark);
+}
