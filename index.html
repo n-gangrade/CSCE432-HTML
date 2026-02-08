@@ -6,35 +6,30 @@
   <title>Navdha Gangrade | Web Page Bio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header class="site-header">
-  <h1>Navdha Gangrade</h1>
-
-  <!-- Decorative Snorlax (top-right) -->
-  <img src="images/snorlax.jpg" alt="" class="snorlax" role="presentation">
-
-  <!-- NON-DECORATIVE image (meaningful) -->
-  <figure class="profile">
-    <img src="images/navdha.JPG" alt="Photo of Navdha Gangrade" width="260" height="260">
-  </figure>
-</header>
-
+    <h1>Navdha Gangrade</h1>
+    <!-- Decorative Snorlax (top-right) -->
+    <img src="images/snorlax.jpg" alt="" class="snorlax" role="presentation">
+    <!-- Profile image -->
+    <figure class="profile">
+      <img src="images/navdha.jpg" alt="Photo of Navdha Gangrade">
+    </figure>
+  </header>
 
   <nav aria-label="Primary" class="nav">
     <a href="#bio">Bio</a>
     <a href="#access">Accessibility</a>
     <a href="#contact">Contact</a>
-    <a href="bio-links.html">Class Bio Links Page</a>
+    <a href="bio-links.html">Class Bio Links</a>
   </nav>
 
   <main>
     <section id="bio">
       <h2>Bio</h2>
       <p>
-        I’m a CS student who likes building <strong>useful</strong> tools that feel <em>easy</em> to use.
+        I'm a CS student who likes building <strong>useful</strong> tools that feel <em>easy</em> to use.
       </p>
-
       <h3>Quick things I like</h3>
       <ul>
         <li>Backend + full-stack projects</li>
@@ -47,8 +42,7 @@
       <p>
         I care about accessibility because I want software to work well for more people.
       </p>
-
-      <h3>What I’m interested in</h3>
+      <h3>What I'm interested in</h3>
       <ol>
         <li>Semantic HTML structure (headings, landmarks)</li>
         <li>Good alt text and keyboard-friendly pages</li>
@@ -58,28 +52,26 @@
     <section id="contact">
       <h2>Connect with me</h2>
       <p>Send me a message using this form (it opens your email app).</p>
-
       <form action="mailto:navdha@example.com" method="post" enctype="text/plain">
         <fieldset>
           <legend>Message</legend>
-
+          
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" required>
-
+          
           <label for="topic">Topic</label>
           <select id="topic" name="topic" required>
             <option value="">Choose one</option>
             <option value="team">Team project</option>
             <option value="accessibility">Accessibility</option>
           </select>
-
+          
           <label for="msg">Message</label>
           <textarea id="msg" name="message" rows="5" required></textarea>
-
+          
           <button type="submit">Open email draft</button>
         </fieldset>
       </form>
-
       <p class="note">
         Replace <code>navdha@example.com</code> with your real email before publishing.
       </p>
@@ -91,7 +83,3 @@
   </footer>
 </body>
 </html>
-
-
-
-
