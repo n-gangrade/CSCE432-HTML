@@ -1,220 +1,238 @@
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
+/* Basic, accessible defaults */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+html {
+  line-height: 1.5;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  color: #111;
+  background: #fff;
 }
 
-/* Header & Navigation */
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
+/* Layout */
+.container {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
 }
 
-header h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
+.site-header {
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0 0;
 }
 
-header p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  opacity: 0.9;
+.header-grid {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+@media (min-width: 900px) {
+  .header-grid {
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
+.profile {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
 }
 
-nav a:hover {
-  opacity: 0.7;
-}
-
-hr {
-  border: none;
-  border-top: 2px solid #ecf0f1;
-  margin: 1rem 0;
-}
-
-/* Main Content */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-section h2 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  border-bottom: 3px solid #3498db;
-  padding-bottom: 0.5rem;
-}
-
-section h3 {
-  color: #34495e;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.3rem;
-}
-
-section p {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-}
-
-/* Links */
-a {
-  color: #3498db;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #2980b9;
-  text-decoration: underline;
-}
-
-/* Lists */
-ul, ol {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Images & Figures */
-figure {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
+.profile img {
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
 }
 
-figcaption {
-  margin-top: 0.75rem;
-  font-style: italic;
-  color: #666;
+.caption {
+  margin-top: 0.5rem;
   font-size: 0.95rem;
 }
 
-/* Table */
-table {
+.banner {
+  display: block;
   width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  height: auto;
+  margin-top: 1rem;
 }
 
-caption {
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-  color: #2c3e50;
+/* Typography */
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 0.2px;
 }
 
-thead {
-  background-color: #34495e;
-  color: white;
+h2 {
+  margin-top: 2.25rem;
+  font-size: 1.5rem;
 }
 
-th, td {
+h3 {
+  margin-top: 1.25rem;
+  font-size: 1.15rem;
+}
+
+p {
+  max-width: 70ch;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 70ch;
+}
+
+.small {
+  font-size: 0.95rem;
+}
+
+/* Navigation */
+.site-nav {
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.nav-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding: 0.75rem 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.6rem;
+  color: inherit;
+}
+
+.site-nav a:focus,
+.site-nav a:hover {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.5rem 0.75rem;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 10;
+}
+
+/* Sections */
+.callout {
+  border-left: 5px solid #111;
   padding: 0.75rem 1rem;
-  text-align: left;
+  background: #f6f6f6;
+  max-width: 70ch;
 }
 
-th {
+/* Lists */
+ul,
+ol {
+  max-width: 70ch;
+}
+
+/* Form styling */
+.contact-form {
+  max-width: 42rem;
+  margin-top: 1rem;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+}
+
+label {
   font-weight: 600;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #ecf0f1;
+input,
+select,
+textarea,
+button {
+  font: inherit;
 }
 
-tbody tr:hover {
-  background-color: #d5dbdb;
+input,
+select,
+textarea {
+  border: 1px solid #aaa;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+button {
+  margin-top: 1rem;
+  border: 1px solid #111;
+  border-radius: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f0f0f0;
 }
 
 /* Footer */
-footer {
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 3rem;
+.site-footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid #ddd;
+  padding: 1rem 0 2rem;
+  background: #fafafa;
 }
 
-footer a {
-  color: #3498db;
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
-footer a:hover {
-  color: #2980b9;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    padding: 1.5rem;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  main {
-    padding: 0 1rem;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  table {
-    font-size: 0.9rem;
-  }
-
-  th, td {
-    padding: 0.5rem 0.75rem;
-  }
+/* Ensure links are clearly links */
+a {
+  text-underline-offset: 0.2em;
 }
